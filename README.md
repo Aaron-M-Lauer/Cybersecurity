@@ -79,7 +79,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/Aaron-M-Lauer/Cybersecurity/blob/main/diagrams/ELK_Setup.jpg
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -116,3 +116,8 @@ _Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running?http://52.250.14.251:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+  - ssh azdmin@52.188.67.141
+  - docker run -ti container/ansible
+  - cd /etc/ansible
+  
