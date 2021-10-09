@@ -7,7 +7,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
  entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain
  pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -48,8 +48,8 @@ Only the jump-box-provisioner machine can accept connections from the Internet. 
   the following IP addresses: xx.xxx.xxx.xxx (my public IP)
 
 Machines within the network can only be accessed by Jump-Box_provisioner VM
-- _Which machine did you allow to access your ELK VM? Jump-Box-Provisioner VM
-   What was its IP address?_52.250.14.251
+- _The machine that would allow access to my ELK VM would be my Jump-Box-Provisioner VM
+   And the IP address of the Jump-Box is_52.250.14.251
 
 A summary of the access policies in place can be found in the table below.
 
@@ -66,7 +66,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is 
   advantageous because it prevented us from having to configure ELK manualy everytime we started the ELK VM.
-- _What is the main advantage of automating configuration with Ansible?_ streamlining the process and allowing us more 
+-The main advantage of automating ansible was to streamline the process and allowing us more 
     control over what was being installed on the ELK VM.
 
 The playbook implements the following tasks:
@@ -104,16 +104,16 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
  https://github.com/Aaron-M-Lauer/Cybersecurity/blob/main/diagrams/Aaron_Filebeat.JPG
 
-_Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? filebeat-playbook.yml
-  _Where do you copy it? /etc/ansible/roles/filebeat-playbook.yml
-- _Which file do you update to make Ansible run the playbook on a specific machine?filebeat-config.yml
-  _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_in the playbook we added
+
+- _The Playbook file is filebeat-playbook.yml
+  _I coppied it to  /etc/ansible/roles/filebeat-playbook.yml
+- _ To make Ansible run the playbook on a specific machine, I'd update the filebeat-config.yml
+  _To specify which machine to install the ELK server on versus which to install Filebeat on I'd add in the playbook 
     the IP's for our 3 web servers under the "hosts" section of the playbook (10.0.0.5/7) and then to include the ELK server 
     we also included the ELK IP (10.1.0.4)
   https://github.com/Aaron-M-Lauer/Cybersecurity/blob/main/ansible
 
-- _Which URL do you navigate to in order to check that the ELK server is running?http://52.250.14.251:5601/app/kibana
+- _The URL That I'd navigate to in order to check that the ELK server is running is http://52.250.14.251:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
